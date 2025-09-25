@@ -1,0 +1,136 @@
+<html>
+<head>
+    <title>Travel Booking Form</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;                      /* Flexbox container */
+            justify-content: center;            /* Center horizontally */
+            align-items: center;                /* Center vertically */
+            font-family: cursive;
+            background-image: url("https://img.freepik.com/free-vector/realistic-travel-background-with-elements_52683-77784.jpg?semt=ais_incoming&w=740&q=80");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        form {
+
+            width: 700px;                       /* Wider box */
+            padding: 30px;
+            border: 2px solid maroon;
+            border-radius: 12px;
+            background-color: rgba(230, 240, 255, 0.95);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        h1 {
+            color: maroon;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;             /*Stack label + input */
+            margin-bottom: 15px;
+            text-align: left;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #888;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: maroon;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            width: 200px;
+        }
+
+        button:hover {
+            background-color: rgb(212, 21, 21);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Plan Your Trip ✈️</h1>
+
+        <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="destination">Preferred Destination:</label>
+            <select id="destination" required>
+                <option value="">--Select--</option>
+                <option value="paris">Paris</option>
+                <option value="uk">London</option>
+                <option value="NYC">New York City</option>
+                <option value="dubai">Dubai</option>
+                <option value="goa">Goa</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Travel Date:</label>
+            <input type="date" id="date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="travelers">Number of Travelers:</label>
+            <input type="number" id="travelers" min="1" max="20" required>
+        </div>
+
+        <div class="form-group">
+            <label for="package">Package Type:</label>
+            <select id="package">
+                <option value="budget">Budget</option>
+                <option value="standard">Standard</option>
+                <option value="luxury">Luxury</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Special Requests / Message:</label>
+            <textarea id="message" rows="4" placeholder="Write your requirements"></textarea>
+        </div>
+
+        <button type="submit">Submit Request</button>
+    </form>
+</body>
+</html>

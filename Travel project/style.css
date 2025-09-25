@@ -1,0 +1,571 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #bed6ef, #a2c8ed);
+
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo img {
+    width: 150px;
+    max-width: 100%;
+}
+
+
+.nav-menu li {
+    list-style: none;
+    margin-right: 20px;
+    background-color: rgba(109, 185, 221, 0.1);
+    border-radius: 20px;
+}
+
+
+    
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+    align-items: right;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;
+    /* hidden by default */
+    color: #333;
+}
+
+/* Default Nav for Desktop */
+.nav-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+    padding-left: 11em;
+    align-items: center;
+}
+
+/* Responsive Nav for Mobile */
+@media (max-width: 320px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu ul {
+        display: none;
+        /* hide nav by default */
+        flex-direction: column;
+        background-color: #fff;
+        /* position: absolute; */
+        top: 70px;
+        /* just below header */
+        align-items: center;
+        width: 200px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+    }
+
+    /* When checkbox checked, show menu */
+    #menu-toggle:checked+.hamburger+.nav-menu ul {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+}
+
+
+.nav-menu a {
+    text-decoration: none;
+    font-family: cursive;
+    font-size: 2.4rem;
+    color: rgb(5, 5, 0);
+    transition: 0.3s;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #91d8e1;
+    border-radius: 20px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* full screen height */
+    /* Background image */
+    background-image: url("images/travelBG.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #1e0661;
+
+}
+
+.content {
+    padding: 0 20px;
+    max-width: 800px;
+}
+
+.content h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #340783;
+    text-align: center;
+}
+
+.content p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    text-decoration: none;
+    color: #e0f7fa;
+    background-color: rgb(201, 135, 49);
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1.8rem;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #ff7f50;
+}
+
+
+.facts-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom right, #e6f2ff, #b3d9ff);
+}
+
+.facts-section h2 {
+    font-size: 2.8rem;
+    color: #004080;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.facts-container {
+    display: inline-block;
+    width: 80%;
+}
+
+.fact-card {
+    display: inline-block;
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #ffffff, #e6f2ff);
+}
+
+.fact-card h3 {
+    font-size: 1.2em;
+    color: #0059b3;
+    margin-bottom: 10px;
+}
+
+.fact-card p {
+    font-size: 0.95em;
+    color: #333;
+}
+
+.research-section {
+    background: linear-gradient(to left, #5094d8, #3399ff);
+    /* darker blue tone */
+    color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 12px;
+    margin: 40px auto;
+    width: 80%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.research-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: #061d82;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.research-section p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    margin: 15px 0;
+    color: #e6f2ff;
+    /* lighter shade for readability */
+}
+
+
+.destinations {
+    font-size: 2.4rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 40px;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: center;
+}
+
+.destinations h1 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #2c3e50;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+
+.destination-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.destination-item {
+    height: auto;
+    width: auto;
+    text-align: left;
+    border: 2px solid maroon;
+    border-radius: 25px;
+    padding: 10px 10px 10px 10px;
+    /* height: 375px;
+    width: 300px; */
+    border: 2px solid rgb(42, 42, 133);
+    /* default border so hover is visible */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    background: #fff;
+}
+
+.destination-item h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: cursive;
+    color: #34495e;
+}
+
+.destination-item p {
+    font-size: 1.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #555555;
+}
+
+
+.destination-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(98, 7, 245, 0.5);
+    border: 2px solid #07e6ff;
+    /* visible change */
+}
+
+.destination-item img {
+    transition: transform 0.3s ease;
+    border-radius: 23px;
+}
+
+.destination-item:hover img {
+    transform: scale(1);
+}
+
+/* Indian Tourism Packages */
+.container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.Tour {
+    align-items: center;
+    margin-left: 30px;
+    display: flex;
+    row-gap: 10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 450px;
+    border: 2px solid #0337c8;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 20px auto;
+    vertical-align: top;
+    margin-left: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(21, 134, 220, 0.5);
+    border: 2px solid #180b92;
+
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    display: inline-block;
+    padding: 15px;
+}
+
+.card-body h3 {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #222;
+}
+
+.tag {
+    background-color: #eaf3ff;
+    color: #0056b3;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    float: right;
+}
+
+.details {
+    font-size: 14px;
+    color: #444;
+    margin: 10px 0;
+}
+
+ul {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li.green {
+    color: green;
+    font-weight: bold;
+}
+
+.price-box {
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    height: auto;
+    width: 600px;
+}
+
+
+.price-box p {
+    margin: 5px;
+    font-size: 14px;
+
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.total {
+    font-size: 14px;
+    color: #555;
+}
+
+footer {
+    background-color: #1d7dc2;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+.enquire{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 35px;
+    color: rgb(42, 62, 32);
+    /* default color */
+    transition: color 0.3s;
+    /* smooth hover effect */
+}
+
+.social-icons a:hover {
+    color: #12044a;
+    /* hover color (blue) */
+}
+
+
+footer p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.4rem;
+}
+
+
+
+/* Responsive */
+@media (max-width: 1177px) {
+    .hero-content h1 {
+        line-height: 0.7;
+    }
+
+    .hero-content p {
+        margin-top: 0;
+        line-height: 0.8;
+    }
+
+    .destinations img {
+        height: 250px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        margin-bottom: 5px;
+    }
+
+    .destination-grid {
+        display: flex;
+        row-gap: 10px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .Tour {
+        display: flex;
+        row-gap: 10px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+    }
+
+    .card {
+        width: auto;
+        height: auto;
+    }
+
+    .destination-item {
+        width: auto;
+        height: auto;
+        margin-top: 20px;
+    }
+
+
+}
+
+@media (max-width: 603px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 430px) {
+    body{
+        object-fit: cover;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-button {
+        padding: 8px 16px;
+    }
+
+    .destinations {
+        font-size: 1.5rem;
+    }
+
+    .destination-item {
+        height: auto;
+        width: auto;
+    }
+
+    .destination-grid {
+        display: flex;
+        row-gap: 10px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .Tour {
+        display: flex;
+        row-gap: 10px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+    }
+
+    .destination-item {
+        height: auto;
+        width: auto;
+    }
+
+
+}
